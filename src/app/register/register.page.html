@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons (click)="goTo('/intro')" slot="start" class="back-buttom">
+        <ion-icon name="arrow-back" color="primary"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-grid>
+        <ion-row>
+          <h1>New Account</h1>
+        </ion-row>
+        <ion-row class="container-form">
+          <form [formGroup]="forma" (ngSubmit)="registration(f)" #f="ngForm">
+              <ion-item no-padding> 
+                <ion-label position="stacked">First Name <ion-text color="primary">*</ion-text></ion-label>
+                <ion-input type="text" [(ngModel)]="user.firstname" formControlName="firstname"></ion-input>
+              </ion-item>
+      
+              <ion-item no-padding>
+                <ion-label position="stacked">Last Name <ion-text color="primary">*</ion-text></ion-label>
+                <ion-input type="text" [(ngModel)]="user.lastname" formControlName="lastname"></ion-input>
+              </ion-item> 
+
+              <ion-item no-padding>
+                <ion-label position="stacked">Id <ion-text color="primary">*</ion-text></ion-label>
+                <ion-input type="number" [(ngModel)]="user.identification" formControlName="identification"></ion-input>
+              </ion-item>
+
+              <ion-item no-padding>
+                  <ion-label position="stacked">Birthday <ion-text color="primary">*</ion-text></ion-label>
+                  <ion-datetime displayFormat="DD MM YY" placeholder="Select Date" [(ngModel)]="user.birthdate" formControlName="birthdate"></ion-datetime>
+              </ion-item>
+
+              <ion-button color="primary" type="submit">Create<i class="fa fa-creative-commons" aria-hidden="true"></i></ion-button>
+          </form>
+        </ion-row>
+    </ion-grid>
+</ion-content>

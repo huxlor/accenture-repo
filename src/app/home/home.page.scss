@@ -1,0 +1,45 @@
+$montserrat: 'Montserrat', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+ion-header{
+    ion-toolbar{
+        position: relative;
+        ion-title{
+            font-family: $montserrat;
+            font-size: 20px;
+        }
+
+        ion-button{
+            position: absolute;
+            top: calc(50% - 23px);
+            right: 0;
+            height: 40px;
+        }
+    }
+}
+
+ion-content{
+    ion-card-header{
+        padding-bottom: 0;
+        ion-card-subtitle{
+            font-family: $roboto;
+        }
+
+        ion-card-title{
+            font-family: $montserrat;
+            width: 220px;
+        }
+    }
+
+    ion-card-content{
+        font-family: $roboto;
+    }
+
+    ion-button{
+        font-family: $montserrat;
+        width: 300px;
+        margin-left: calc(50% - 150px);
+        height: 65px;
+        text-transform: uppercase;
+    }
+}
